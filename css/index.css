@@ -1,5 +1,11 @@
 * {
-    margin: 0;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+body {
+    min-height: 100%;
+    max-height: 100%;
 }
 
 div.container {
@@ -26,12 +32,22 @@ div.center img {
     max-width: 15%;
 }
 
+div.right div{
+    float: left;
+}
+
+footer div.icon{
+    visibility: hidden;
+    max-width: 0;
+    min-width: 0;
+}
+
 @media (max-width: 1200px) {
     div.container {
         display: flex;
         flex-direction: column;
     }
-    
+
     div.left div a {
         position: relative;
         top: 10px;
@@ -55,12 +71,40 @@ div.center img {
         min-height: 40%;
         max-height: 40%;
     }
-    
+
     div.center img {
         position: relative;
         bottom: 5%;
         min-width: 35%;
         max-width: 35%;
+    }
+
+    div.right div {
+        position: relative;
+        visibility: hidden;
+        max-width: 0;
+        min-width: 0;
+    }
+
+    footer div.icon{
+        margin-left: 0%;
+        margin-bottom: 100%;
+        visibility: visible;
+        min-height: 30px;
+        max-height: 30px;
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    footer div.icon div {
+        float: left;
+        margin-bottom: 100%;
+        visibility: visible;
+        min-height: 30px;
+        max-height: 20%;
+        min-width: 25%;
+        max-width: 25%;
+        text-align: center;
     }
 }
 
